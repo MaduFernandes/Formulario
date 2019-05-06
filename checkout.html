@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script type="text/javascript" src="js/inputmask-plugin.js"></script>
+        <link rel="stylesheet" href="css/checkout.css">
+        <title>Checkout</title>
+    </head>
+    
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-target="#navbarToggleExternalContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <a class="navbar-brand" href="index.html">Loja</a>
+
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+            <ul class="navbar-nav">
+                
+                <li class="nav-item active">
+                    <a class="nav-link" href="sobre.html">Sobre</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Ajuda">Ajuda</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Perguntas frequentes">Perguntas frequentes</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Entre em contato</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0">Pesquisa</button>
+            </form>
+        </div>
+    </nav>
+
+        <div class="jumbtron jumbotron-fluid">
+            <div class="container">
+
+        <h1 class="display-4">Ótima escolha!</h1>
+        <p class="lead">Obrigado pela preferência de loja! Preencha seus dados para efetivar a compra.</p>
+        
+    </div> <!--fim .container dentro do jumbotron-->
+        </div> <!--fim .jumbotron-->
+       
+        <div class="container">
+   
+            <div class="row">
+   
+                <!--card aqui-->
+    
+    <div class="col-md-4">
+   
+        <div class="card mb-3">
+   
+            <div class="card-header">
+   
+                <h2>Sua Compra</h2>
+   
+    </div><!--fim .card-header-->
+
+        <div class="card-body">
+   
+            <!--aqui vai a dl-->
+   
+            <img src="img/produtos/foto15-azul.png" alt="Vestido azul" class="img-thumbnail mb-3">
+        <dl>
+            <dt>Produto</dt>
+            <dd>Vestido Azul</dd>
+
+            <dt>Cor</dt>
+            <dd>Azul</dd>
+
+            <dt>Tamanho</dt>
+            <dd>36</dd>
+
+            <dt>Preço</dt>
+            <dd id="preco">R$ 59,90</dd>
+            
+
+        </dl>
+    </div> <!--card-body-->
+</div> <!--card mb3-->   
+
+<div class="card mb-3">
+    <div class="card-body">
+
+        <div class="form-group">
+            <label for="qtd">Quantidade:</label>
+            <input type="number" id="qtd" min="1" max="99" value="1" class="form-control">
+        </div> <!--fechamento form-group-->
+
+        <div class="form-group">
+            <label for="total">Total</label>
+            <output for="qtd preco" id="total" class="form-control">R$ 50,90</output>
+            <script type="text/javascript" src="js/total.js"></script>
+        
+        </div><!-- fim da form group-->
+    
+    </div><!--fim card-body-->
+
+</div><!--fim de card mb-3-->
+
+</div> <!--cardy mb4-->
+
+
+        <form class="col-md-8">
+            <div class="row">
+            <!--FIELDSET DE DADOS PESSOAS-->
+            
+            <fieldset class="col-lg-6">
+                <legend>Dados pessoais</legend>
+                
+                <div class="row">
+                    <div class="col">
+                    <input type="text" class="form-control" placeholder="Nome">
+                </div>
+
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Sobrenome">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputNumber">Telefone</label>
+                    <input type="text" class="form-control" id="inputNumber" placeholder="(12) 1234-5678"> 
+                  </div>
+
+                <div class="form-group">
+                    <label for="e-mail">E-mail</label>
+
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">@</span>
+                            </div>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="email@exemplo.com" required>
+                </div>
+            </div>
+
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="cpf" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" data-mask="999.999.999-99" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputAddress2">Endereço</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Exemplo: casa, apartamento..">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">Cidade</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="inputState">Estado</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Escolha...</option>
+                        <option value="Acre">AC</option>
+                        <option value="Alagoas">Al</option>
+                        <option value="Amapa">AP</option>
+                        <option value="Amazonas">AM</option>
+                        <option value="Bahia">BA</option>
+                        <option value="Ceara">CE</option>
+                        <option value="Distrito-Federal">DF</option>
+                        <option value="Espirito-Santos">ES</option>
+                        <option value="Goias">GO</option>
+                        <option value="Maranhao">MA</option>
+                        <option value="Mato-Grosso">MT</option>
+                        <option value="Mato-Gosso-do-Sul">MS</option>
+                        <option value="Minas-Gerais">MG</option>
+                        <option value="Para">PA</option>
+                        <option value="Paraiba">PB</option>
+                        <option value="Parana">PR</option>
+                        <option value="Pernambuco">PB</option>
+                        <option value="Piaui">PI</option>
+                        <option value="Rio-de-Janeiro">RJ</option>
+                        <option value="Rio-Grande-do-Norte">RN</option>
+                        <option value="Rio-Grande-do-Sul">RS</option>
+                        <option value="Rondonia">RO</option>
+                        <option value="Roraima">RR</option>
+                        <option value="Santa-Catarina">SC</option>
+                        <option value="Sao-Paulo">SP</option>
+                        <option value="Sergipe">SE</option>
+                        <option value="Tocantins">TO</option>
+                    </select>
+                </div>
+
+                <div class="form-group custom-control custom-checbox">
+                    <input type="checkbox" class="custom-control-input" id="newsletter" value="sim" checked>
+                    <label class="custom-control-label" for="newsletter">
+                        Quero receber promoções.
+                    </label>
+                </div>
+            </fieldset>
+
+
+            <!-- FIELDSET DO CARTÃO-->
+           <div class="col-lg-6">
+            <fieldset>
+                <legend>Cartão de crédito</legend>
+
+                <div class="form-group">
+                    <label for="numero-cartao">Número - CVV</label>
+                    <input type="text" class="form-control" id="numero-cartao" name="numero-cartao" data-mask="9999 9999 9999 9999 - 999">
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                    <label class="input-group-text" for="bandeira-cartao">Bandeira</label>
+                    </div>
+
+                    <select class="custom-select" id="bandeira-cartao">
+                        <option disabled selected>Selecione uma opção...</option>
+                        <option value="master">MasterCard</option>
+                        <option value="visa">VISA</option>
+                        <option value="amex">American Express</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="validade-cartao">Validade</label>
+                    <input type="month" class="form-control" id="validade-cartao" name="validade-cartao">
+                </div>
+            </fieldset>
+
+            <button type="button class="btn btn-primary btn-lg>
+                <span class="oi oi-thumb-uo"></span>
+                Confirmar Pedido
+            </button>
+           </div><!--fim .col-lg-6-->
+            </div><!--fim row-->
+    
+ </form>
+
+</div><!--fim do ROW-->
+
+</div><!--- fim do container-->
+
+</div><!--fim .card-->
+
+</div><!--fim .container da pagina-->
+
+        <script type="text/javascript" src="js/jquery."></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+    </body>
+</html>

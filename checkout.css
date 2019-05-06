@@ -1,0 +1,9 @@
+.form-control:invalid {
+    border: 1px solid #cc0000;
+}
+
+.form-inline {
+    position: absolute;
+    right: 0;
+}
+
